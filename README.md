@@ -13,11 +13,11 @@
 
 # ERD 
 
-  USER
+  ## USER
  id, username, password, email, last_login
-  POSTS
+  ## POSTS
  id, user_id, title, content
-  Comments
+  ## Comments
  id, blog_id, user_id, content
 
  # Wireframe
