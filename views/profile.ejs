@@ -35,44 +35,5 @@
       </ul>
     </nav>
   </header>
-
-  <h1>My Social Media Profile</h1>
-    
-    <div class="profile">
-        <div class="profile-header">
-            <h2><%= username %></h2>
-            <p><%= bio %></p>
-        </div>
-
-        <div class="profile-info">
-            <h3>About Me</h3>
-            <p><%= aboutMe %></p>
-            <h3>Contact Information</h3>
-            <p>Email: <%= email %></p>
-            <p>Phone: <%= phone %></p>
-        </div>
-
-        <div class="recent-posts">
-            <h3>Recent Posts</h3>
-            <% if (posts.length === 0) { %>
-                <p>No posts yet.</p>
-            <% } else { %>
-                <ul>
-                    <% posts.forEach(function(post) { %>
-                        <li><%= post.content %></li>
-                    <% }); %>
-                </ul>
-            <% } %>
-        </div>
-    </div>
-    
-    <section class="contact" id="contact">
-        <h2 class="heading">Welcome to your <span>Profile!</span></h2>
-            <div class="input-box">
-                <h3>Name <span><%= name %>!</h3>
-                <h3>Email <span><%= email %>! </h3>
-                <h3>Phone <span><%= phone %>! </h3>
-            </div>
-    </section>
 </body>
 </html>
