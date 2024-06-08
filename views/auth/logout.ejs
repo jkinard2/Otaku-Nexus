@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otaku Sphere Logout</title>
+
+</head>
+<body>
+    <% if (loggedIn) {
+        <p>Welcome, User!</p>
+        <a href="/auth/logout">Logout</a>
+   <% } else { %>
+       <p>You are logged out!</p>
+  <% } %>
+
+
+  <input type="submit" value="Logout" class="btn">
+</body>
+</html>

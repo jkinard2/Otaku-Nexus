@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Posts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Social Media Posts</h1>
+    
+    <!-- Form to create a new post -->
+    <h2>Create a New Post</h2>
+    <form action="/posts" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="content">Post Content:</label>
+        <textarea id="content" name="content" rows="4" required></textarea>
+        <button type="submit">Post</button>
+    </form>
+
+    <!-- Display existing posts -->
+    <h2>Recent Posts</h2>
+    <% if (posts.length === 0) { %>
+        <p>No posts yet.</p>
+    <% } else { %>
+        <div class="post-container">
+            <% posts.forEach(function(post) { %>
+                <div class="post">
+                    <p><strong><%= post.username %>:</strong></p>
+                    <p><%= post.content %></p>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+</body>
+</html>
